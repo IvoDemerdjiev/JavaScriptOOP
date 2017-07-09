@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Object.</p>
+
+<p id="firstDemo"></p>
+<p id="SecondDemo"></p>
+<p id="personDemo"></p>
+
+<script>
+    //Using an Object Literal
+    var firstPerson = {
+        firstName : "John",
+        lastName  : "Doe",
+        age       : 50,
+        eyeColor  : "blue"
+    };
+
+    var secondPerson = new Object();
+    secondPerson.firstName = "Pesho";
+    secondPerson.lastName = "Peshev";
+    secondPerson.age = 20;
+    secondPerson.eyeColor = "green";
+
+    function person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+
+    var woman = new person("Sally", "Rally", 48, "green");
+
+    document.getElementById("firstDemo").innerHTML =
+        firstPerson.firstName + " " + firstPerson.lastName + " " + "Created using an Object Literal";
+
+    document.getElementById("SecondDemo").innerHTML =
+        secondPerson.firstName + " " + secondPerson.lastName + " " +  "Created using keyword new";
+
+    document.getElementById("personDemo").innerHTML =
+        woman.firstName + " " + woman.lastName + " " +  "Created using Object Constructor";
+
+</script>
+
+</body>
+</html>

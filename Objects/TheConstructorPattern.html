@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The Constructor Pattern</p>
+
+<p id="demo"></p>
+
+<script>
+    function Person(name, age, job){
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayName = function(){
+            alert(this.name);
+        };
+    }
+
+    var person1 = createPerson("Nicholas", 29, "Software Engineer");
+    var person2 = createPerson("Greg", 27, "Doctor");
+
+    document.getElementById("demo").innerHTML =
+        person1.name + " " + "and" + " " + person2.name
+</script>
+
+</body>
+</html>
